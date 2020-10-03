@@ -1,6 +1,16 @@
 # Flatten
 
-**TODO: Add description**
+Flattens a given list
+
+## Usage
+
+```elixir
+iex> Flatten.flatten([ 1, [ 2, [ 3 ] ], 4 ])
+{:ok, [ 1, 2, 3, 4 ]}
+
+iex> Flatten.flatten("asd")
+{:error, :not_a_list}
+```
 
 ## Installation
 
@@ -14,8 +24,3 @@ def deps do
   ]
 end
 ```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/flatten](https://hexdocs.pm/flatten).
-
